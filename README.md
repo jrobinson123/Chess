@@ -14,4 +14,35 @@ Standard chess boards have 64 squares in 8 rows and 8 collumns. Therefore I crea
 ```processing
 squares = new Square[8][8];
 ```
+The Square class has a x and y variable to display it's position. Rect mode is set to corner. horz describes the horizontal component of the square (from 0 to 7) and vert describes the vertical component of the square (from 0 to 7). squareColor is either "black" or "white". The occupiedPiece is the index of the piece that occupies a square, it's -1 if the square is unoccupied. 
 
+``processing
+class Square {
+  int x, y;
+  int horz, vert;
+  String squareColor;
+  color Color;
+  int textColor;
+  int occupiedPiece;
+  String occupiedColor;
+  boolean pieceBeingTaken;
+  Square(int x, int y, int horz, int vert, String squareColor, int occupiedPiece, String occupiedColor) {
+    this.x = x;
+    this.y = y;
+    this.horz = horz;
+    this.vert = vert;
+    this.squareColor = squareColor;
+    this.occupiedPiece = occupiedPiece;
+    this.occupiedColor = occupiedColor;
+    pieceBeingTaken = false;
+  
+
+    if (squareColor.equals("black")) {
+      Color = color(11, 56, 1);
+      textColor = 255;
+    } else if (squareColor.equals("white")) {
+      Color = color(255, 234, 171);
+      textColor = 0;
+    }
+  }
+  ```
