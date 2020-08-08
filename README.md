@@ -14,7 +14,7 @@ Standard chess boards have 64 squares in 8 rows and 8 collumns. Therefore I crea
 ```processing
 squares = new Square[8][8];
 ```
-The Square class has a x and y variable to display it's position. Rect mode is set to corner. horz describes the horizontal component of the square (from 0 to 7) and vert describes the vertical component of the square (from 0 to 7). squareColor is either "black" or "white". The occupiedPiece is the index of the piece that occupies a square, it's -1 if the square is unoccupied. 
+The Square class has a x and y variable to display it's position. Rect mode is set to corner. horz describes the horizontal coordinate of the square (from 0 to 7) and vert describes the vertical coordiante of the square (from 0 to 7). squareColor is either "black" or "white". The occupiedPiece is the index of the piece that occupies a square, it's -1 if the square is unoccupied. OccupiedColor tells the color of the piece that occupies a square, "black", "white", or "none" if the piece is unoccupied.
 
 ```processing
 class Square {
