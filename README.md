@@ -9,5 +9,9 @@ Clone or download my code. From you computer you can play the game by opening on
 
 # Code Explaination
 
-
+## Drawing the board
+Standard chess boards have 64 squares in 8 rows and 8 collumns. Therefore I created a Square class with each object acting as one square on a chessboard. I then created a 2D array of length 8 by 8. 
+```processing
+squares = new Square[8][8];
+```
 
