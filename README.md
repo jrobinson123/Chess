@@ -16,7 +16,7 @@ squares = new Square[8][8];
 ```
 The Square class has a x and y variable to display it's position. Rect mode is set to corner. horz describes the horizontal component of the square (from 0 to 7) and vert describes the vertical component of the square (from 0 to 7). squareColor is either "black" or "white". The occupiedPiece is the index of the piece that occupies a square, it's -1 if the square is unoccupied. 
 
-``processing
+```processing
 class Square {
   int x, y;
   int horz, vert;
