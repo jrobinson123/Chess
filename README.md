@@ -55,4 +55,44 @@ class Square {
     }
   }
   ```
-  
+  decideSquareColor is a function that decides the color of a Square based on its horizontal and vertical coordinates:
+  ```processing
+  String decideSquareColor(int h, int v){
+  if(h%2 == 0){
+    if(v%2==0){
+      return "white";
+    }else{
+      return "black";
+    }
+  }else{
+    if(v%2==0){
+      return "black";
+    }else{
+      return "white";
+    }
+  }
+}
+ ```
+decideOccupiedColor decides the occupiedColor of a Square based on its vertical coordinate and decideOccupiedPiece decides the occupiedPiece of a Square based on is horizontal and vertical coordinates:
+```processing
+String decideOccupiedColor(int v){
+  if(v == 0 || v == 1){
+    return "black";
+  }else if(v == 6 || v == 7){
+    return "white";
+  }else{
+    return "none";
+  }
+}
+
+int decideOccupiedPiece(int h, int v){
+ if(v == 0 || v == 7){
+    return h + 8;
+  }else if(v == 1 || v == 6){
+    return h;
+  }else{
+    return -1;
+  }
+}
+```
+
