@@ -111,4 +111,30 @@ for(int h = 0; h < 8; h++){
     }
    }
 ```
-
+## The Piece Class
+The Piece class represents different chess pieces. Each piece has an x and y variable to display its position. Like the Square class, each Piece has a horizontal coordinate called horz and a vertical coordinate called vert. horz and vert for each Piece correlate to the square the piece is on. pieceColor is whether a piece is "black" or "white". The variable called type is what each piece is: a pawn, rook, knight, bishop, king or queen. image is the appropriate image for a particular type and color of a piece. The boolean alive is whether or not a piece is currently in the game. When a piece is taken, alive is set to false. materialValue is the value of a piece: 1 for pawns, 3 for knights and bishops, 5 for rooks, and 9 for queens. 
+```processing
+class Piece{
+  int x,y;
+  int horz,vert;
+  String pieceColor;
+  String type;
+  PImage image;
+  boolean alive;
+  int index;
+  int materialValue;
+  boolean pieceHasNotMoved;
+  Piece(int x, int y, int horz, int vert, String pieceColor, String type, int index){
+    this.x = x;
+    this.y = y;
+    this.horz = horz;
+    this.vert = vert;
+    this.pieceColor = pieceColor;
+    this.type = type;
+    this.index = index;
+    alive = true;
+    pieceHasNotMoved = true;
+    this.setImages();
+    
+  }
+```
