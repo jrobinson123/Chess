@@ -95,4 +95,20 @@ int decideOccupiedPiece(int h, int v){
   }
 }
 ```
+The display method is used to display a Square. 
+```processing
+void display() {
+    noStroke();
+    fill(Color);
+    rect(x, y, 100, 100); 
+  }
+```
+After the Square objects in squares are initialized, they can be displayed using the display method in the void draw section of the code. 
+```processing
+for(int h = 0; h < 8; h++){
+    for(int v = 0; v < 8; v++){
+      squares[h][v].display();
+    }
+   }
+```
 
