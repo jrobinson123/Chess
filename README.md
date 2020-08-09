@@ -46,3 +46,13 @@ class Square {
     }
   }
   ```
+  This is the initialization of squares:
+  ```processing
+  for(int h = 0; h < 8; h++){
+    for(int v = 0; v < 8; v++){
+      squares[h][v] = new Square(100 * h, 100 * v, h, v, decideSquareColor(h,v),
+      decideOccupiedPiece(h,v), decideOccupiedColor(v));
+    }
+  }
+  ```
+  
