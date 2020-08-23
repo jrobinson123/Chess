@@ -183,11 +183,31 @@ for(int i = 0; i<16; i++){
      pieces[1][i].display();
    }
 ```
-The main driver of the game flow is mouse clicks. Every mouse click, every square ins Squares will run a method called checkForClick(). 
+The main driver of the game flow is mouse clicks. Therfore a useful boolean function is the mouseHover which will return true if the mouse is over a particular rectangle based on the rectangles x and y position, and x and y size. It should be noted this function assumes rect or image mode to be CENTER. 
+```processing
+boolean mouseHover(int x, int y, int xSize, int ySize){
+  if(mouseX > x && 
+  mouseX < x + xSize &&
+  mouseY > y &&
+  mouseY <  y + ySize){
+    return true;
+  }else{
+    return false;
+  }
+}
+```
+
+With every mouse click, all 64 square objects in Squares will run a method called checkForClick(). 
 ```processing
 void mousePressed(){
   for(int h = 0; h < 8; h++){
     for(int v = 0; v < 8; v++){
       squares[h][v].checkForClick();
     }
+```
+For starters it's worth noting that checkForClick has an initial conditional statement using mouseHover(), this means that even though checkForClick() is run for every square it will effectively only check one square: the one the player has clicked on. 
+```processing
+void checkForClick() {
+    if (mouseHover(x, y, 100, 100)) {
+     
 ```
