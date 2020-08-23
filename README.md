@@ -183,3 +183,11 @@ for(int i = 0; i<16; i++){
      pieces[1][i].display();
    }
 ```
+The main driver of the game flow is mouse clicks. Every mouse click, every square ins Squares will run a method called checkForClick(). 
+```processing
+void mousePressed(){
+  for(int h = 0; h < 8; h++){
+    for(int v = 0; v < 8; v++){
+      squares[h][v].checkForClick();
+    }
+```
