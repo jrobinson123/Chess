@@ -211,3 +211,24 @@ void checkForClick() {
     if (mouseHover(x, y, 100, 100)) {
      
 ```
+Following the mouseHover check there is an if else stament that will check through several conditions. First if the square is a occupied by white piece and the turn is 0 (aka it's white to move). Second if the square is occupied by a black piece and turn is 1( aka it's black to move) and finally if neither of these conditions are met but the square selected is still occupied. 
+```processing
+if(occupiedColor.equals("white") && turn == 0){
+        if(pieceSelected == occupiedPiece){
+          pieceSelected = -1;
+          resetSquareColors();
+        }else{
+          pieceSelected = occupiedPiece;
+          showPossibleMoves();
+        }
+      }else if(occupiedColor.equals("black") && turn == 1){
+        if(pieceSelected == occupiedPiece){
+          pieceSelected = -1;
+          resetSquareColors();
+        }else{
+          pieceSelected = occupiedPiece;
+          showPossibleMoves();
+        }
+      }
+      else if(pieceSelected != -1){
+    ```
