@@ -10,7 +10,7 @@ Clone or download my code. From you computer you can play the game by opening on
 # Code Explaination
 
 ## Drawing the board
-Standard chess boards have 64 squares in 8 rows and 8 collumns. Therefore I created a Square class with each object acting as one square on a chessboard. I then created a 2D array of length 8 by 8. 
+Standard chess boards have 64 squares in 8 rows and 8 collumns. Therefore I created a Square class with each object acting as one square on a chessboard. I then created a 2D array of Square of length 8 by 8. 
 ```processing
 squares = new Square[8][8];
 ```
@@ -138,3 +138,8 @@ class Piece{
     
   }
 ```
+In order to represent all 32 pieces on a chess board, a 2D array of Piece of size 2 by 16 is used. The first index represents pieceColor, while the second index represents the exact piece(rook on one side of the board, pawn in a certain position). 
+```processing
+pieces = new Piece[2][16];
+```
+
