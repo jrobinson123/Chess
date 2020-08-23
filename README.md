@@ -168,4 +168,18 @@ for(int i = 0; i<8; i++){
   pieces[1][14] = new Piece(650,50,6,0,"black", "knight",14);
   pieces[1][15] = new Piece(750,50,7,0,"black", "rook",15);
 ```
-
+The simple display function displays a Piece. 
+```processing
+void display(){
+    if(alive){
+      image(image,x,y);
+    }
+  }
+```
+Which can then be called in the draw method. 
+```processing
+for(int i = 0; i<16; i++){
+     pieces[0][i].display();
+     pieces[1][i].display();
+   }
+```
