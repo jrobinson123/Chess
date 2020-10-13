@@ -7,7 +7,7 @@ My chess game known as Vanta Black Chess is a fully playable two-person chess ga
 The entire program is written in Processing 3. If you don’t already have Processing you can download for free here: https://processing.org/download/. This program only uses one external library: processing.sound.
 
 # Usage
-Clone or download my code. From you computer you can play the game by opening one of the .pde files and pressing the play button in the Processing environment. You can also the export the application as a double-clickable executible on Mac or PC by pressing File/Export Application in the Processing evnironment.
+Clone or download my code. From you computer you can play the game by opening one of the .pde files and pressing the play button in the Processing environment. You can also the export the application as a double-clickable executible on Mac or PC by pressing File/Export Application in the Processing environment.
 
 # Code Explaination
 
@@ -185,7 +185,7 @@ for(int i = 0; i<16; i++){
      pieces[1][i].display();
    }
 ```
-The main driver of the game flow is mouse clicks. Therfore a useful boolean function is the mouseHover which will return true if the mouse is over a particular rectangle based on the rectangles x and y position, and x and y size. It should be noted this function assumes rect or image mode to be CENTER. 
+The main driver of the game flow is mouse clicks. Therefore a useful boolean function is the mouseHover which will return true if the mouse is over a particular rectangle based on the rectangles x and y position, and x and y size. It should be noted this function assumes rect or image mode to be CENTER. 
 ```processing
 boolean mouseHover(int x, int y, int xSize, int ySize){
   if(mouseX > x && 
